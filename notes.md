@@ -81,3 +81,30 @@ create the folder WEB-INF as src/main/webapp/WEB-INF
 		  }
 		}
 	} 
+
+#entries in properties files
+	
+
+	#spring jpa datasource configuration
+	#spring.datasource.driver-class-name=org.h2.Driver
+	spring.datasource.driverClassName=org.h2.Driver
+	#spring.datasource.url=jdbc:h2:mem:db
+	#spring.datasource.url=jdbc:h2:file:~/h2/propertydb
+	spring.datasource.url=jdbc:h2:file:./TestDataBase
+
+	spring.datasource.username=sa
+	spring.datasource.password=
+
+
+	#hibernate configruation
+	spring.jpa.hibernate.ddl-auto=update
+	spring.jpa.show-sql=true
+	spring.jpa.properties.hibernate.format_sql=true
+	spring.jpa.properties.hibernate.dialect=org.hibernate.dialect.H2Dialect
+
+
+	#acutator
+	#management.endpoint.metrics.enabled=true
+	management.endpoints.web.exposure.include=*
+	management.endpoint.health.show-details=always
+	management.endpoints.web.base-path=/admin
